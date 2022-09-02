@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+  <link rel="stylesheet" href="carusel.css">
+</head>
+<body>
+
+<div class="slideshow-container">
+
+    <div class="mySlides fade">
+    <div class="numbertext">1 / 3</div>
+    <img src="irrigators.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">2 / 3</div>
+    <img src="irrigators_1.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+  <div class="mySlides fade">
+    <div class="numbertext">3 / 3</div>
+    <img src="irrigators_2.jpg" style="width:100%">
+    <div class="text"></div>
+  </div>
+
+
+  <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+  <a class="next" onclick="plusSlides(1)">&#10095;</a>
+</div>
+<br>
+
+
+<div style="text-align:center">
+  <span class="dot" onclick="currentSlide(1)"></span>
+  <span class="dot" onclick="currentSlide(2)"></span>
+  <span class="dot" onclick="currentSlide(3)"></span>
+</div>
+
+<script>
+  var slideIndex = 1;
+  showSlides(slideIndex);
+
+
+  function plusSlides(n) {
+    showSlides(slideIndex += n);
+  }
+
+  function currentSlide(n) {
+    showSlides(slideIndex = n);
+  }
+
+  function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active"; }
+</script>
+
+</body>
+</html>
+<div class="gallery">
+  <div class="first_pic">
+    <div class="gallery_img_1">
+      <img src="wp660.jpg" width="250px" height="250px" alt="">
+    </div>
+    <div class="gallery_text_1 owl">Ирригаторы</div>
+  </div>
+  <div class="second_pic">
+    <div class="gallery_img_2 ">
+      <img src="oral_io.jpg" width="250px" height="250px" alt="">
+    </div>
+    <div class="gallery_text_2 owl">Электрические зубные щетки</div>
+  </div>
+  <div class="third_pic">
+    <div class="gallery_img_3">
+      <img src="ultrasoft.jpg" width="250px" height="250px" alt="">
+    </div>
+    <div class="gallery_text_3 owl">Товары для брекетов</div>
+  </div>
+</div>
+
+
+
+
+<div class="carousel_irrigator">
+  <div class="car_irr_img">
+    <img src="irrigators.jpg" width="70%" alt=" ">
+  </div>
+  <div class="car_irr_2_img">
+    <img src="irrigators_1.jpg" width="70%" alt=" "></div>
+</div>
+
+<div class="carousel_oral-b">
+  <div class="car_oral_img">
+    <img src="oral-b-io.jpg" width="70%" alt=" ">
+  </div>
+</div>
+<div class="carousel_ortho">
+
+  <div class="car_ortho_img">
+    <img src="irrigators_2.jpg" width="70%" alt=" ">
+  </div>
+</div>
